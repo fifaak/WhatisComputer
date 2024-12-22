@@ -2,6 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* e.g., in src/style.css (after @tailwind directives) */
+@layer utilities {
+  .drop-shadow-custom {
+    filter: drop-shadow(0 4px 196.4px #8B8BD0);
+  }
+}
 body {
   font-family: 'Prompt', sans-serif;
 }

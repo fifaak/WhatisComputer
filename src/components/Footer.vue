@@ -1,11 +1,13 @@
 <template>
   <footer
-    class="
-      fixed bottom-0 left-0 w-full z-50
-      flex flex-col justify-center items-center px-20 py-5
-      bg-white
-    "
-    role="contentinfo"
+  class="
+     bottom-0 left-0
+    w-full
+    z-50
+    flex flex-col justify-center items-center px-20 py-5
+    bg-white
+  "
+  role="contentinfo"
   >
       <img
         loading="lazy"
