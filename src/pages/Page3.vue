@@ -1,131 +1,87 @@
-<!-- File: src/pages/Page3.vue -->
 <template>
-    <!-- Outer container: centers content, adds padding top/bottom -->
-    <div class="container mx-auto px-4 py-10">
-      
-      <!-- Heading Section (Hardware) -->
-      <div class="flex items-center gap-4 mb-8">
-        <img
-          class="w-14 h-14"
-          src="https://via.placeholder.com/57x57"
-          alt="icon"
-        />
-        <h1 class="text-3xl font-semibold text-gray-900">
-          ฮาร์ดแวร์
-        </h1>
-      </div>
-  
-      <!-- Mainboard Section (stack on mobile, side-by-side on md+) -->
-      <div class="flex flex-col md:flex-row gap-6 mb-12">
-        <!-- Image on the left (or top on mobile) -->
-        <img
-          class="w-full md:w-[40%] h-auto rounded "
-          src="../assets/mainboard.svg"
-          alt="Mainboard"
-        />
-        <!-- Text block on the right (or below on mobile) -->
+    <div class="w-[40%] overflow-x-auto py-8 px-4 ml-auto" style="border: 2px solid black;">
+      <!-- A single row of cards -->
+      <div class="flex flex-nowrap space-x-6 pl-20 w-[100%]">
+        <!-- Loop through the cards array and render each "card" -->
         <div
+          v-for="(card, index) in cards"
+          :key="index"
           class="
-            flex flex-col justify-center
-            bg-blue-500 text-white
-            p-6
-            rounded
+            relative
+            w-[600px]
+            h-[500px]         /* Fixed height */
+            bg-white
+            border border-gray-200
+            rounded-lg
             shadow
-            md:w-[60%]
+            p-6
+            pb-8
+            overflow-hidden   /* Hide any overflow if content is taller than 500px */
           "
         >
-          <h2 class="text-3xl font-bold mb-2">
-            เมนบอร์ด (Mainboard)
-          </h2>
-          <p class="text-lg">
-            เป็นแผงวงจรกลางเพื่อควบคุมการทำงานของชิ้นส่วนต่างๆ
-          </p>
-        </div>
-      </div>
+          <!-- Image container (overlaps the card) -->
+          <div
+            class="
+              absolute
+              -top-16
+              left-1/2
+              transform -translate-x-1/2
+            "
+          >
+            <img
+              :src="card.image"
+              :alt="card.title"
+              class="w-50 h-50 object-cover drop-shadow-lg"
+            />
+          </div>
   
-      <!-- Four-Card Section (CPU, I/O, RAM, Storage) -->
-      <!-- grid-cols-1 for mobile, 2 for sm, 3 for md, 4 for lg -->
-      <div
-        class="
-          grid grid-cols-1
-          sm:grid-cols-2
-          md:grid-cols-3
-          lg:grid-cols-4
-          gap-8
-        "
-      >
-        <!-- Card 1: CPU -->
-        <div class="bg-white border border-blue-500 rounded-lg shadow p-6 text-center">
-          <img
-            class="mx-auto mb-4"
-            src="../assets/CPU.svg"
-            alt="CPU"
-          />
-          <h3 class="text-blue-500 text-2xl font-bold mb-2">
-            หน่วยประมวลผลกลาง (CPU)
-          </h3>
-          <p class="text-gray-600 text-base mb-1">
-            สมองของคอมพิวเตอร์
-          </p>
-          <p class="text-gray-600 text-base">
-            ทำหน้าที่ประมวลผลคำสั่งและควบคุมการทำงานของระบบทั้งหมด
-          </p>
-        </div>
-  
-        <!-- Card 2: I/O Devices -->
-        <div class="bg-white border border-blue-500 rounded-lg shadow p-6 text-center">
-          <img
-            class="mx-auto mb-4"
-            src="../assets/3d_comp.svg"
-            alt="I/O Devices"
-          />
-          <h3 class="text-blue-500 text-2xl font-bold mb-2">
-            อุปกรณ์อินพุตและเอาต์พุต (I/O Devices)
-          </h3>
-          <p class="text-gray-600 text-base">
-            เช่น คีย์บอร์ด เมาส์ จอภาพ และเครื่องพิมพ์
-          </p>
-        </div>
-  
-        <!-- Card 3: RAM -->
-        <div class="bg-white border border-blue-500 rounded-lg shadow p-6 text-center">
-          <img
-            class="mx-auto mb-4"
-            src="../assets/ram.svg"
-            alt="RAM"
-          />
-          <h3 class="text-blue-500 text-2xl font-bold mb-2">
-            หน่วยความจำหลัก (RAM)
-          </h3>
-          <p class="text-gray-600 text-base">
-            หน่วยความจำชั่วคราวที่ใช้เก็บข้อมูลและคำสั่งที่กำลังถูกใช้งาน
-          </p>
-        </div>
-  
-        <!-- Card 4: Storage -->
-        <div class="bg-white border border-blue-500 rounded-lg shadow p-6 text-center">
-          <img
-            class="mx-auto mb-4"
-            src="../assets/SSD.svg"
-            alt="Storage"
-          />
-          <h3 class="text-blue-500 text-2xl font-bold mb-2">
-            อุปกรณ์จัดเก็บข้อมูล (Storage)
-          </h3>
-          <p class="text-gray-600 text-base">
-            หน่วยความจำถาวรสำหรับเก็บข้อมูลและโปรแกรม
-          </p>
+          <!-- Card content -->
+          <div class="mt-24 text-center">
+            <h3 class="text-xl font-bold text-blue-600">{{ card.title }}</h3>
+            <p class="text-gray-600 text-sm mt-2">
+              {{ card.description }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </template>
-  
+
+
+
   <script>
+  import CPU from '../assets/CPU.svg';
+  import ComputerContent from '../assets/computer_content.svg';
+  import Ram from '../assets/ram.svg';
+  import Ssd from '../assets/SSD.svg';
+  
   export default {
     name: 'Page3',
-  }
+    data() {
+      return {
+        cards: [
+          {
+            title: 'หน่วยประมวลผลกลาง (CPU)',
+            description: 'สมองของคอมพิวเตอร์ ที่ทำหน้าที่ประมวลผลและควบคุมการทำงานทั้งหมด',
+            image: CPU, // Use the imported reference
+          },
+          {
+            title: 'อุปกรณ์อินพุตและเอาต์พุต (I/O Devices)',
+            description: 'เช่น คีย์บอร์ด เมาส์ จอภาพ และเครื่องพิมพ์',
+            image: ComputerContent,
+          },
+          {
+            title: 'หน่วยความจำหลัก (RAM)',
+            description: 'ใช้เก็บข้อมูลและคำสั่งที่กำลังถูกใช้งาน',
+            image: Ram,
+          },
+          {
+            title: 'อุปกรณ์จัดเก็บข้อมูล (Storage)',
+            description: 'สำหรับเก็บข้อมูลและโปรแกรมใช้งาน',
+            image: Ssd,
+          },
+        ],
+      };
+    },
+  };
   </script>
-  
-  <style scoped>
-  /* Your component-specific styles (if needed) */
-  </style>
