@@ -1,87 +1,96 @@
 <template>
-    <div class="w-[40%] overflow-x-auto py-8 px-4 ml-auto" style="border: 2px solid black;">
-      <!-- A single row of cards -->
-      <div class="flex flex-nowrap space-x-6 pl-20 w-[100%]">
-        <!-- Loop through the cards array and render each "card" -->
-        <div
-          v-for="(card, index) in cards"
-          :key="index"
-          class="
-            relative
-            w-[600px]
-            h-[500px]         /* Fixed height */
-            bg-white
-            border border-gray-200
-            rounded-lg
-            shadow
-            p-6
-            pb-8
-            overflow-hidden   /* Hide any overflow if content is taller than 500px */
-          "
-        >
-          <!-- Image container (overlaps the card) -->
-          <div
-            class="
-              absolute
-              -top-16
-              left-1/2
-              transform -translate-x-1/2
-            "
-          >
-            <img
-              :src="card.image"
-              :alt="card.title"
-              class="w-50 h-50 object-cover drop-shadow-lg"
-            />
-          </div>
-  
-          <!-- Card content -->
-          <div class="mt-24 text-center">
-            <h3 class="text-xl font-bold text-blue-600">{{ card.title }}</h3>
-            <p class="text-gray-600 text-sm mt-2">
-              {{ card.description }}
-            </p>
-          </div>
+  <div class="relative w-full max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+    <!-- Main Content Section -->
+    <div class="md:relative md:w-1/4 lg:w-1/3">
+      <img
+        src="../assets/section2/mainboard.svg"
+        alt="Mainboard Illustration"
+        class="w-full h-auto object-contain md:absolute md:right-1 "
+      />
+    </div>
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 ">
+      
+      <!-- Content Div -->
+      <div class="flex flex-col text-xl leading-10 rounded-3xl max-w-[988px] text-neutral-700 bg-blue-500 p-8 md:p-16 rounded-3xl shadow-lg mx-auto my-[80px]">
+        <h2 class="text-3xl font-bold text-white">เมนบอร์ด (Mainboard)</h2>
+        <p class="text-zinc-100 mt-4">
+          เป็นแผงวงจรกลางเพื่อควบคุมการทำงานของชิ้นส่วนต่างๆ
+        </p>
+      </div>
+
+      <!-- Overlapping Image -->
+    </div>
+
+
+
+
+    <div class="flex flex-wrap justify-center gap-20">
+      <!-- Loop through the cards array and render each "card" -->
+      <div
+        v-for="(card, index) in cards"
+        :key="index"
+        class="relative w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow p-6 pb-8 overflow-visible transform hover:scale-105 transition-transform duration-300"
+      >
+        <!-- Image container (overlaps the card) -->
+        <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 z-10">
+          <img
+            :src="card.image"
+            :alt="`Image representing ${card.title}`"
+            class="w-[80%] h-[80%] sm:w-32 sm:-32 md:w-40 md:h-40  drop-shadow-lg "
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Card content -->
+        <div class="mt-16 sm:mt-20 text-center">
+          <h3 class="text-lg sm:text-xl font-bold text-blue-600">{{ card.title }}</h3>
+          <p class="text-gray-600 text-xs sm:text-sm mt-2">
+            {{ card.description }}
+          </p>
         </div>
       </div>
     </div>
-  </template>
+  </div>
+</template>
 
+<script>
+import CPU from "../assets/section1/CPU.svg";
+import ComputerContent from "../assets/section1/computer_content.svg";
+import Ram from "../assets/section1/ram.svg";
+import Ssd from "../assets/section1/SSD.svg";
 
+export default {
+  name: "Page3",
+  data() {
+    return {
+      cards: [
+        {
+          title: "หน่วยประมวลผลกลาง (CPU)",
+          description:
+            "สมองของคอมพิวเตอร์ ที่ทำหน้าที่ประมวลผลและควบคุมการทำงานทั้งหมด",
+          image: CPU, // Use the imported reference
+        },
+        {
+          title: "อุปกรณ์อินพุตและเอาต์พุต (I/O Devices)",
+          description: "เช่น คีย์บอร์ด เมาส์ จอภาพ และเครื่องพิมพ์",
+          image: ComputerContent,
+        },
+        {
+          title: "หน่วยความจำหลัก (RAM)",
+          description: "ใช้เก็บข้อมูลและคำสั่งที่กำลังถูกใช้งาน",
+          image: Ram,
+        },
+        {
+          title: "อุปกรณ์จัดเก็บข้อมูล (Storage)",
+          description: "สำหรับเก็บข้อมูลและโปรแกรมใช้งาน",
+          image: Ssd,
+        },
+      ],
+    };
+  },
+};
+</script>
 
-  <script>
-  import CPU from '../assets/section1/CPU.svg';
-  import ComputerContent from '../assets/section1/computer_content.svg';
-  import Ram from '../assets/section1/ram.svg';
-  import Ssd from '../assets/section1/SSD.svg';
-  
-  export default {
-    name: 'Page3',
-    data() {
-      return {
-        cards: [
-          {
-            title: 'หน่วยประมวลผลกลาง (CPU)',
-            description: 'สมองของคอมพิวเตอร์ ที่ทำหน้าที่ประมวลผลและควบคุมการทำงานทั้งหมด',
-            image: CPU, // Use the imported reference
-          },
-          {
-            title: 'อุปกรณ์อินพุตและเอาต์พุต (I/O Devices)',
-            description: 'เช่น คีย์บอร์ด เมาส์ จอภาพ และเครื่องพิมพ์',
-            image: ComputerContent,
-          },
-          {
-            title: 'หน่วยความจำหลัก (RAM)',
-            description: 'ใช้เก็บข้อมูลและคำสั่งที่กำลังถูกใช้งาน',
-            image: Ram,
-          },
-          {
-            title: 'อุปกรณ์จัดเก็บข้อมูล (Storage)',
-            description: 'สำหรับเก็บข้อมูลและโปรแกรมใช้งาน',
-            image: Ssd,
-          },
-        ],
-      };
-    },
-  };
-  </script>
+<style scoped>
+/* Optional: Add any additional custom styles here */
+</style>

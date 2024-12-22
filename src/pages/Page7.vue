@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-blue-background">
-  <div class="container mx-auto px-4 py-8">
+  <div class="bg-blue-background py-60">
+  <div class="container mx-auto px-4 mt-[60vh]">
     <div class="flex flex-col gap-8">
       
       <!-- Computer Types Section -->
@@ -235,7 +235,7 @@ const companies = ref([
   background-image: url('../assets/section2/blue_bg.png');
   background-size: cover; /* Adjusts the image to cover the entire container */
   background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-position: center; /* Centers the image */
+  background-position: center; 
 }
 
 </style>
