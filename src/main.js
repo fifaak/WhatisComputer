@@ -5,7 +5,7 @@ import router from './router'
 
 // Make sure this CSS file includes the Tailwind directives:
 import './style.css'  // or './main.css'
-
+import '@fortawesome/fontawesome-free/css/all.css';
 createApp(App)
   .use(router)
   .mount('#app')

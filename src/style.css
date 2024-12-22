@@ -7,7 +7,16 @@
   .drop-shadow-custom {
     filter: drop-shadow(0 4px 196.4px #8B8BD0);
   }
+  .drop-shadow-custom-yellow {
+    filter: drop-shadow(0px 4px 196.4px #FDD688);
+  }
 }
 body {
   font-family: 'Prompt', sans-serif;
+  background: url('./assets/bg.svg');
+  background-repeat:no-repeat;
+  background-size: cover;
 }
+
+
+

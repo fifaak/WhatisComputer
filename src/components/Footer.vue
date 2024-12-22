@@ -1,11 +1,13 @@
 <template>
   <footer
   class="
+    absolute
      bottom-0 left-0
     w-full
     z-50
     flex flex-col justify-center items-center px-20 py-5
     bg-white
+    mt-[200px]
   "
   role="contentinfo"
   >
