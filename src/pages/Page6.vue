@@ -46,5 +46,8 @@ export default {
 </script>
 
 <style scoped>
-/* Add further customizations if needed */
+body{
+  background: url("../assets/section2/section2.svg");
+  
+}
 </style>
