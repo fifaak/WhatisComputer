@@ -1,5 +1,15 @@
 <template>
   <!-- Outer container: stack on small screens, side-by-side on md+ -->
+       <!-- Main Content Section -->
+       <div class="p-6 flex items-center gap-4 my-[200px]">
+  <!-- Icon -->
+  <div class="text-gray-500 text-5xl">
+    <i class="fa-solid fa-users"></i>
+  </div>
+  <!-- Heading -->
+  <h1 class="text-4xl font-bold text-black">บุคลากร</h1>
+</div>
+
   <div
     class="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 justify-center items-start text-black p-4 md:p-6 lg:p-8"
     role="main"

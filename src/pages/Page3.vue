@@ -1,25 +1,33 @@
 <template>
-  <div class="relative w-full max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-    <!-- Main Content Section -->
-    <div class="md:relative md:w-1/4 lg:w-1/3">
-      <img
-        src="../assets/section2/mainboard.svg"
-        alt="Mainboard Illustration"
-        class="w-full h-auto object-contain md:absolute md:right-1 "
-      />
-    </div>
-    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 ">
-      
-      <!-- Content Div -->
-      <div class="flex flex-col text-xl leading-10 rounded-3xl max-w-[988px] text-neutral-700 bg-blue-500 p-8 md:p-16 rounded-3xl shadow-lg mx-auto my-[80px]">
-        <h2 class="text-3xl font-bold text-white">เมนบอร์ด (Mainboard)</h2>
-        <p class="text-zinc-100 mt-4">
-          เป็นแผงวงจรกลางเพื่อควบคุมการทำงานของชิ้นส่วนต่างๆ
-        </p>
-      </div>
+  <div class="">
 
-      <!-- Overlapping Image -->
-    </div>
+    <!-- Main Content Section -->
+    <div class="p-6 flex items-center gap-4 my-[200px]">
+  <!-- Icon -->
+  <div class="text-gray-500 text-5xl">
+    <i class="fa-solid fa-computer"></i>
+  </div>
+  <!-- Heading -->
+  <h1 class="text-4xl font-bold text-black">ฮาร์ดแวร์</h1>
+</div>
+    <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 px-4 md:px-8 lg:px-16">
+  <!-- Image Section -->
+  <div class="relative w-full md:w-1/2 lg:w-1/4 md:pr8">
+    <img
+      src="../assets/section2/mainboard.svg"
+      alt="Mainboard Illustration"
+      class="w-full h-auto object-contain"
+    />
+  </div>
+
+  <!-- Content Section -->
+  <div class="flex flex-col text-xl leading-8 rounded-3xl max-w-[988px] text-neutral-700 bg-blue-500 p-6 md:p-12 lg:p-16 shadow-lg">
+    <h2 class="text-2xl md:text-3xl font-bold text-white">เมนบอร์ด (Mainboard)</h2>
+    <p class="text-zinc-100 mt-4">
+      เป็นแผงวงจรกลางเพื่อควบคุมการทำงานของชิ้นส่วนต่างๆ
+    </p>
+  </div>
+</div>
 
 
 

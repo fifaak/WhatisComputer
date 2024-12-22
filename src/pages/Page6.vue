@@ -1,5 +1,14 @@
 <template>
   <!-- Outer container: stacks vertically on small screens, side-by-side on md+ -->
+  <div class="p-6 flex items-center gap-4 my-[200px]">
+  <!-- Icon -->
+  <div class="text-gray-500 text-5xl">
+    <i class="fa-solid fa-database"></i>
+  </div>
+  <!-- Heading -->
+  <h1 class="text-4xl font-bold text-black">ข้อมูล</h1>
+</div>
+
   <div
     class="flex flex-col md:flex-row items-center justify-center gap-5 p-10 md:p-6 lg:p-8 text-black w-full"
   >

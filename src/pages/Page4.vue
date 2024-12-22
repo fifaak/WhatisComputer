@@ -1,4 +1,17 @@
 <template>
+
+    <!-- Main Content Section -->
+    <div class="p-6 flex items-center gap-4 my-[200px]">
+  <!-- Icon -->
+  <div class="text-gray-500 text-5xl">
+    <i class="fa-solid fa-code"></i>
+  </div>
+  <!-- Heading -->
+  <h1 class="text-4xl font-bold text-black">ซอฟต์แวร์</h1>
+</div>
+
+
+
   <div class="flex flex-col rounded-none" role="main">
     <!-- Navigation / Menu Bar -->
     <nav
