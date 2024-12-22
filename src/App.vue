@@ -1,30 +1,27 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <!-- A container for your overall layout -->
+  <div class="relative min-h-screen">
+    
+    <!-- The background is placed first so it's behind other elements -->
+    <Background />
+    
+    <!-- NavBar at the top -->
+    <NavBar />
+    
+    <!-- Route View for pages -->
+    <router-view />
+    
+    <!-- Footer at the bottom -->
+    <Footer />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<script setup>
+import Background from './components/Background.vue'
+import NavBar from './components/NavBar.vue'
+import Footer from './components/Footer.vue'
+</script>
+
+<style>
+/* If you need global or layout-wide styles, put them here */
 </style>
