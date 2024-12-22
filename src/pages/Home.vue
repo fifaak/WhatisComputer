@@ -2,13 +2,14 @@
     <!-- Outer container to center everything and provide top margin -->
     <main
   class="
-    mt-10
+
     flex flex-col
     items-center
     justify-center
     gap-20
+    h-full
+    mt-[40px]
     w-full
-    min-h-screen
     px-4
     sm:px-6
     lg:px-8
@@ -29,7 +30,7 @@
       >
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/167f8969fc9e4702b2c941ecb34dd7f8/6cf8dc6dc400002ba0c95ef3b96bdddb83680d4d5c07f1dc8e910d0f944bdeed?apiKey=167f8969fc9e4702b2c941ecb34dd7f8&"
+          src="../assets/crma_logo.png"
           alt="Computer concept illustration"
           class="
             object-contain

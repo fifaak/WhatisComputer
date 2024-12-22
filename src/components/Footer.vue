@@ -13,7 +13,7 @@
   >
       <img
         loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/167f8969fc9e4702b2c941ecb34dd7f8/375e7632194c7fb299552f3abadf2c7385596ac63efcea7039feedaf3a5267b3?apiKey=167f8969fc9e4702b2c941ecb34dd7f8&"
+        src="../assets/crma_logo.png"
         alt="Footer logo"
         class="object-contain aspect-[0.95] w-[71px]"
       />

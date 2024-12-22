@@ -6,9 +6,8 @@
       justify-center
       text-center
       px-4
-      py-10
+      py-[40px]
       w-full
-      min-h-screen
     "
     role="main"
     aria-labelledby="main-heading"

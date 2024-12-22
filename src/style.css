@@ -12,6 +12,7 @@
   }
 }
 body {
+  padding-top: 60px;
   font-family: 'Prompt', sans-serif;
   background: url('./assets/bg.svg');
   background-repeat:no-repeat;
