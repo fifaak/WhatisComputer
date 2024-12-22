@@ -50,10 +50,10 @@
 
 
   <script>
-  import CPU from '../assets/CPU.svg';
-  import ComputerContent from '../assets/computer_content.svg';
-  import Ram from '../assets/ram.svg';
-  import Ssd from '../assets/SSD.svg';
+  import CPU from '../assets/section1/CPU.svg';
+  import ComputerContent from '../assets/section1/computer_content.svg';
+  import Ram from '../assets/section1/ram.svg';
+  import Ssd from '../assets/section1/SSD.svg';
   
   export default {
     name: 'Page3',

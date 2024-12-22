@@ -85,7 +85,7 @@
         role="presentation"
       >
         <img
-          src="../assets/computer_content.svg"
+          src="../assets/section1/computer_content.svg"
           alt="Computer illustration"
           class="
             w-[90%]
@@ -103,7 +103,7 @@
 </template>
 
 <script>
-export default {
+export default {  
   name: 'Page1',
 }
 </script>

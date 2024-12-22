@@ -31,7 +31,7 @@
     <div class="w-full md:w-[600px] lg:w-[640px] min-w-[240px] my-auto">
       <img
         loading="lazy"
-        src="../assets/dbsvg.png"
+        src="../assets/section1/dbsvg.png"
         alt="Computer information visualization"
         class="object-contain w-full h-auto aspect-[1.08] rounded-none"
       />
@@ -46,8 +46,5 @@ export default {
 </script>
 
 <style scoped>
-body{
-  background: url("../assets/section2/section2.svg");
-  
-}
+
 </style>

@@ -28,13 +28,13 @@
               class="flex overflow-hidden gap-3 sm:gap-6 px-5 py-3 text-xs leading-relaxed text-center rounded-none"
             >
               <div class="my-auto">
-                <img src="../assets/minimize.svg" alt="" />
+                <img src="../assets/section1/minimize.svg" alt="" />
               </div>
               <div>
-                <img src="../assets/rectangle.svg" alt="" />
+                <img src="../assets/section1/rectangle.svg" alt="" />
               </div>
               <div>
-                <img src="../assets/ChromeClose.svg" alt="" />
+                <img src="../assets/section1/ChromeClose.svg" alt="" />
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@
                 >
                   <img
                     loading="lazy"
-                    src="../assets/adobe.svg"
+                    src="../assets/section1/adobe.svg"
                     class="object-contain self-center w-full max-w-md aspect-[1.21] mb-4"
                     alt="Application Software illustration"
                   />
@@ -140,7 +140,7 @@
                 >
                   <img
                     loading="lazy"
-                    src="../assets/window_os.svg"
+                    src="../assets/section1/window_os.svg"
                     class="object-contain self-center w-full max-w-sm aspect-[0.94] mb-4"
                     alt="Operating System illustration"
                   />

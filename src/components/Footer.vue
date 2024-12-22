@@ -13,7 +13,7 @@
   >
       <img
         loading="lazy"
-        src="../assets/crma_logo.png"
+        src="../assets/section1/crma_logo.png"
         alt="Footer logo"
         class="object-contain aspect-[0.95] w-[71px]"
       />

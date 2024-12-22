@@ -7,7 +7,7 @@
     <!-- Image on the left (or top on small screens) -->
     <div class="flex justify-center w-full md:w-auto">
       <img
-        src="../assets/person.svg"
+        src="../assets/section1/person.svg"
         alt=""
       />
     </div>

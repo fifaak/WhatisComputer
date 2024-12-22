@@ -30,7 +30,7 @@
       >
         <img
           loading="lazy"
-          src="../assets/crma_logo.png"
+          src="../assets/section1/crma_logo.png"
           alt="Computer concept illustration"
           class="
             object-contain
@@ -74,7 +74,7 @@
         >
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/167f8969fc9e4702b2c941ecb34dd7f8/3c810940c4306b6a1f1f38e00e4e8509f4abef6113fa1c57f61a9fcaa26d4898?apiKey=167f8969fc9e4702b2c941ecb34dd7f8&"
+            src="https://cdn.builder.io/api/v1/image/assets/section1/167f8969fc9e4702b2c941ecb34dd7f8/3c810940c4306b6a1f1f38e00e4e8509f4abef6113fa1c57f61a9fcaa26d4898?apiKey=167f8969fc9e4702b2c941ecb34dd7f8&"
             alt=""
             class="w-4 h-4"
           />
@@ -101,7 +101,7 @@
             object-contain
             h-auto
           "
-          src="../assets/computer_home.svg"
+          src="../assets/section1/computer_home.svg"
           alt="3D Computer"
         />
       </div>
